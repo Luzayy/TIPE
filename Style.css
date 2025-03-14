@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #aed6f1;
+    color: #333;
+    line-height: 1.6;
+}
+body2 {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #f0f0f0;
+}
+
+/* Style pour la bulle */
+.bubble {
+    position: absolute;
+    top: 20px; /* Positionne la bulle en haut */
+    left: 50%;
+    transform: translateX(-50%); /* Centre la bulle horizontalement */
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    font-size: 15px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Animation de la bulle au chargement */
+.bubble {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Définition de l'animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header p {
+    font-style: italic;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #2e86c1;
+    margin-bottom: 15px;
+}
+
+section h3 {
+    color: #333;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+section ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
