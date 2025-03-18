@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIPE - Projet</title>
+    <link rel="stylesheet" href="Style2.css">
+    <!-- Lien vers Google Fonts pour la nouvelle police -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Bande du titre -->
+    <div class="header">
+        <h1>QUESTIONNEMENT</h1>
+    </div>
+
+    <!-- Onglets -->
+    <div class="tabs-container">
+        <div class="tabs">
+            <div class="tab active" onclick="showTab(0)">Présentation du Projet</div>
+            <div class="tab" onclick="showTab(1)">Sources</div>
+            <div class="tab" onclick="showTab(2)">Littérature</div>
+        </div>
+    </div>
+
+    <!-- Contenu des onglets -->
+    <div class="tab-content active" id="tab1">
+        <h1>Projet TIPE Léonie Gauthier</h1>
+        
+
+        <!-- Sections alignées sous forme de blocs -->
+        <div class="section" id="objectifs">
+            <h2>Objectifs du Projet</h2>
+            <p>
+			Au final:
+			<ul><li>... le cerveau humains peut-il s'adapter lorqu'ils ne reçoit pas toutes ses entrées habituelles</li></ul>
+			A court terme:
+			<ul><li>Me renseigner sur les boucles fermées du cerveaux et choisir un exemple d'entrée qui a disparue.</ul></li>
+			<ul><li>Une fois le sujet décider, acquérir les connaissances qui sont en rapport en biologie.</ul></li>
+			</p>
+        </div>
+
+        <div class="section" id="avancement">
+            <h2>Avancement</h2>
+            <p>
+			<ul><li>Discussion avec un chercheur dans les noeurosciences début d'idée de problématique sur les boucles fermées du cerveau.</ul></li>
+			<ul><li>Lectures d'articles scientifiques qui permettrent de comprendre la proprioception.</ul></li>
+			
+			</p>
+        </div>
+
+        <div class="section" id="soucis">
+            <h2>Soucis</h2>
+            <p>
+			
+			
+			</p>
+        </div>
+    </div>
+
+    <div class="tab-content" id="tab2">
+        <h1>Sources</h1>
+        <p>
+		<ul><li>La proprioception, notre sixième sens. Fabrice Sarlegna</ul></li>
+		</p>
+    </div>
+
+    <div class="tab-content" id="tab3">
+        <h1>Littérature / Explication des notions </h1>
+        <p></p>
+    </div>
+
+    <script>
+        function showTab(tabIndex) {
+            // Masquer tous les contenus de tab
+            var contents = document.querySelectorAll('.tab-content');
+            for (var i = 0; i < contents.length; i++) {
+                contents[i].classList.remove('active');
+            }
+
+            // Retirer la classe active de tous les onglets
+            var tabs = document.querySelectorAll('.tab');
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
+
+            // Afficher le contenu du tab sélectionné
+            document.getElementById('tab' + (tabIndex + 1)).classList.add('active');
+            tabs[tabIndex].classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
